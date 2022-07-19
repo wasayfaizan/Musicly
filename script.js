@@ -1,11 +1,29 @@
 const music = document.querySelector("audio");
 const play = document.querySelector("#play");
 const image = document.querySelector("img");
-const artist = document.querySelector(".artist");
-const songName = document.querySelector(".songName");
+const artist = document.querySelector("#artist");
+const songName = document.querySelector("#songName");
 const previous = document.querySelector(".previousButton");
-const forward = document.querySelector("forwardButton");
+const forward = document.querySelector(".forwardButton");
 
+
+const songs = [
+    {
+        name : "glimpseofus",
+        songName : "Glimpse Of Us",
+        artist : "Joji"
+    },
+    {
+        name : "perfect",
+        songName : "Perfect",
+        artist : "Ali Gatie"
+    },
+    {
+        name : "letmedownslowly",
+        songName : "Let Me Down Slowly",
+        artist : "Alec Benjamin"
+    }
+]
 
 
 // PLAY BUTTON
@@ -36,6 +54,24 @@ let isPlaying = false;
 
 
       const loadSong = (songs) => {
-          songName.textContent = songs.songName
+          songName.textContent = songs.songName;
+          artist.textContent = songs.artist;
+          music.src =  "music/" + songs.name + ".mp3";
+          image.src = "images/" + songs.name + ".jpeg";
+      };
+
+
+      songIndex = 0;
+    //   loadSong(songs[2]);
+      const nextSong = () =>{
+        songIndex = (songIndex + 1) % songs.length;
+        loadSong(songs[songIndex]);
+        playMusic();
       }
-      loadSong(songs);
+      const previousSong = () =>{
+        songIndex = (songIndex - 1 + songs.length) % songs.length;
+        loadSong(songs[songIndex]);
+      }
+
+      forward.addEventListener('click', nextSong);
+      previous.addEventListener('click', previousSong);
