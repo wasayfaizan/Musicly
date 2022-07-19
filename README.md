@@ -2,7 +2,7 @@
 <h2 align="center"> A Music Player built with HTML, CSS & JavaScript.</h2>
 <h4>It allows you to go forward, backward, play and pause a song.</h4>
 
-<ul>💻 Currently Working On New Features:
+<ul>Currently Working On New Features:
   <li>Favourite Song</li>
   <li>Mute</li>
   <li>Progress Bar</li>
