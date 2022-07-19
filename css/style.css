@@ -67,10 +67,51 @@ img {
 }
 
 .musicControls {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 3rem;
 }
 .musicControls .fas {
   color: #111111;
   font-size: 2rem;
-  cursor: pointers;
+  cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+
+.musicControls .playButton {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.musicControls .fas:hover {
+  color: grey;
+}
+
+.musicControls .playButton:hover {
+  background-color: #a14ecd;
+  color: #111;
+  box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.animation {
+  animation: rotateImage 6s linear infinite;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
