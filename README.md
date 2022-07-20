@@ -1,6 +1,10 @@
 <h1 align="center"> Musicly </h1>
-<h2 align="center"> A Music Player built with HTML, CSS & JavaScript.</h2>
-<h4>It allows you to go forward, backward, play and pause a song.</h4>
+<h2 align="center">It allows you to go forward, backward, play and pause a song.</h2>
+<ul><h4>Built With:</h4>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
 
 <ul>Currently Working On New Features:
   <li>Favourite Song</li>
