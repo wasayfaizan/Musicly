@@ -1,9 +1,15 @@
 <h1 align="center"> Musicly </h1>
-<h2 align="center">It allows you to go forward, backward, play and pause a song.</h2>
 <ul><h3>Built With:</h3>
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
+</ul>
+
+<ul><h3>Features:</h3>
+<li>Play Song</li>
+<li>Pause Song</li>
+<li>Play Next Song</li>
+<li>Play Previous Song</li>
 </ul>
 
 <ul><h3>Currently Working On New Features:</h3>
