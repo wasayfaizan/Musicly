@@ -6,7 +6,7 @@
 <li>JavaScript</li>
 </ul>
 
-<ul>Currently Working On New Features:
+<ul><h3>Currently Working On New Features:</h3>
   <li>Favourite Song</li>
   <li>Mute</li>
   <li>Progress Bar</li>
