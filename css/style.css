@@ -24,8 +24,8 @@ body {
 }
 
 .musicContainer {
-  width: 35rem;
-  height: 60rem;
+  width: 50rem;
+  height: 80rem;
   text-align: center;
   padding: 3rem;
   background-color: #015095;
@@ -38,7 +38,7 @@ body {
   font-weight: 500;
   word-spacing: 0.3rem;
   color: #a14ecd;
-  margin: 2rem 0 0.5rem 0;
+  margin: 0rem 0 0.5rem 0;
   font-size: 2.5rem;
   font-weight: 500;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
@@ -48,7 +48,7 @@ body {
   color: #2f2763;
   letter-spacing: 0.1rem;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 300;
 }
 
@@ -64,10 +64,10 @@ img {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 /* PROGRESS BAR */
-
 .progressBar {
   display: flex;
   justify-content: center;
@@ -194,4 +194,51 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* // Adds a wave like animation */
+.loader {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+.loader .stroke {
+  background: #f1f1f1;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0px 5px;
+  animation: animate 1.4s linear infinite;
+}
+@keyframes animate {
+  50% {
+    height: 20%;
+    background: #4286f4;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 0s;
 }

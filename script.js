@@ -7,7 +7,16 @@ const previous = document.querySelector(".previousButton");
 const forward = document.querySelector(".forwardButton");
 const random = document.querySelector(".randomButton");
 const mute = document.querySelector(".muteButton");
-const 
+const progress = document.querySelector(".seekSlider");
+const volumeSlider = document.querySelector(".volumeSlider");
+const currentTime = document.querySelector(".currentTime");
+const duration = document.querySelector(".durationTime");
+const wave = document.querySelector("#wave")
+
+
+
+
+
 
 const songs = [
     {
@@ -36,6 +45,7 @@ let isPlaying = false;
         music.play();
         play.classList.replace("fa-play", "fa-pause");
         image.classList.add("animation");
+        wave.classList.add('loader')
       };
 
       // to pause a song
@@ -44,6 +54,7 @@ let isPlaying = false;
         music.pause();
         play.classList.replace("fa-pause", "fa-play");
         image.classList.remove("animation");
+        wave.classList.remove('loader')
       };
 
       play.addEventListener('click', () => {
@@ -82,12 +93,22 @@ let isPlaying = false;
           const rand = Math.floor(Math.random()*songs.length);
           songIndex = rand;
           loadSong(songs[songIndex])
+          playMusic()
       }
 
       random.addEventListener('click', randomSong)
 
+      // Mute a song
       const  muteSong = () => {
-        Audio.muted = "true";
+        music.muted;
       }
 
       mute.addEventListener('click', muteSong)
+
+
+      function changeVolume(){
+        music.volume = volumeSlider.value / 100;
+    }
+    
+    
+  
