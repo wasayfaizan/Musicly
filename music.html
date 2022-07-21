@@ -24,7 +24,36 @@
           <img src="images/glimpseOfUs.jpeg" alt="" />
         </div>
         <audio src="music/Joji - Glimpse of Us (Official Video).mp3"></audio>
+
+        <!-- // A slider to jump to the part you want to listen to -->
+        <div class="progressBar">
+          <div class="currentTime">00:00</div>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seekSlider"
+            onchange="seekto()"
+          />
+          <div class="durationTime">00:00</div>
+        </div>
+
+        <!-- // A slider to jump to the part you want to listen to -->
+        <div class="volumeBar">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="volumeSlider"
+            onchange="changeVolume()"
+          />
+        </div>
+
+        <!-- // Basic music controls -->
         <div class="musicControls">
+          <i class="fas fa-random randomButton" title="random"></i>
           <i
             class="fas fa-thin fa-backward previousButton"
             id="prev"
@@ -36,6 +65,18 @@
             id="next"
             title="Next"
           ></i>
+          <i class="fas fa-volume-mute muteButton"></i>
+        </div>
+
+        <div id="wave">
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
         </div>
       </div>
     </div>

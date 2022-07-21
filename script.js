@@ -5,7 +5,9 @@ const artist = document.querySelector("#artist");
 const songName = document.querySelector("#songName");
 const previous = document.querySelector(".previousButton");
 const forward = document.querySelector(".forwardButton");
-
+const random = document.querySelector(".randomButton");
+const mute = document.querySelector(".muteButton");
+const 
 
 const songs = [
     {
@@ -62,7 +64,6 @@ let isPlaying = false;
 
 
       songIndex = 0;
-    //   loadSong(songs[2]);
       const nextSong = () =>{
         songIndex = (songIndex + 1) % songs.length;
         loadSong(songs[songIndex]);
@@ -75,3 +76,18 @@ let isPlaying = false;
 
       forward.addEventListener('click', nextSong);
       previous.addEventListener('click', previousSong);
+
+      // Plays Random Song
+      const randomSong = () => {
+          const rand = Math.floor(Math.random()*songs.length);
+          songIndex = rand;
+          loadSong(songs[songIndex])
+      }
+
+      random.addEventListener('click', randomSong)
+
+      const  muteSong = () => {
+        Audio.muted = "true";
+      }
+
+      mute.addEventListener('click', muteSong)
